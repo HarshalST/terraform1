@@ -15,5 +15,5 @@ provider "linux" {
 }
 
 resource "linux_file" "unnatifile" {
-    path = "/tmp/testfile234"
+    path = "/tmp/testfile345"
 }
