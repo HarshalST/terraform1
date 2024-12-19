@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "github" {
-  token = "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"
+  token = ${{ secrets.GITHUBTOKEN }}
 }
 
 resource "github_repository" "MyRepo" {
