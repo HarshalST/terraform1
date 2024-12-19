@@ -1,19 +1,18 @@
 terraform {
   required_providers {
-    linux = {
-      source = "TelkomIndonesia/linux"
-      version = "0.7.0"
+    github = {
+      source = "integrations/github"
+      version = "6.4.0"
     }
   }
 }
 
-provider "linux" {
-    host     = "192.168.235.131"
-    port     = 22
-    user     = "root"
-    password = "1"
+provider "github" {
+  token = "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"
 }
 
-resource "linux_file" "unnatifile" {
-    path = "/tmp/testfile456"
+resource "github_repository" "MyRepo" {
+	 name    = "repo-created-using-terraform"
+	 visibility = "public"
+	 description = "This repo is created using terraform"
 }
